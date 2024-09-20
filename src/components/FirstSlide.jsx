@@ -1,4 +1,4 @@
-import './FirstSlide.css'
+import './FirstSlide.scss'
 import backgroundText from './/imagesFirstSlide/background-text.png'
 import mainText from './imagesFirstSlide/text.png'
 import home from './imagesFirstSlide/home.png'

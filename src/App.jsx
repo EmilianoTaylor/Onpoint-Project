@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import background from './components/imagesFirstSlide/background.jpg'
 import homeLogo from './components/imagesFirstSlide/homeLogo.png'
 import FirstSlide from './components/FirstSlide'

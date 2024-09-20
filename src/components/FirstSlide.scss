@@ -14,47 +14,42 @@
 	position: absolute;
 }
 
+@mixin imgSizeParam ($position, $width, $left) {
+	position: $position;
+	width: $width;
+	left: $left;
+}
+
 .layer7 {
-	width: 17%;
-	position: absolute;
-	left: -8%;
+	@include imgSizeParam(absolute, 17% , -8%);
 	top: 10%;
 	z-index: -10;
 }
 
 .pinkTwo {
-	position: absolute;
-	width: 35%;
+	@include imgSizeParam(absolute, 35% , 38%);
 	bottom: 55%;
-	left: 38%;
 	z-index: 2;
 }
 
 .layer4c2 {
-	position: absolute;
+	@include imgSizeParam(absolute, 10% , 86%);
 	right: 4%;
 	top: 4%;
-	width: 10%;
 }
 
 .pinkOne {
-	position: absolute;
-	width: 25%;
+	@include imgSizeParam(absolute, 25% , -5%);
 	bottom: 5%;
-	left: -5%;
 }
 
 .layer4c {
-	position: absolute;
+	@include imgSizeParam(absolute, 7% , 35%);
 	bottom: 10%;
-	width: 7%;
-	left: 35%;
 }
 
 .bakti_one {
-	position: absolute;
-	width: 7%;
-	left: 5%;
+	@include imgSizeParam(absolute, 7% , 5%);
 	bottom: 30%;
 	z-index: -10;
 	transform: translate(0);

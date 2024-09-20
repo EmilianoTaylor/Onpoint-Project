@@ -11,63 +11,52 @@
 	width: 300vw;
 }
 
-.firstSlide {
-	left: 0	;
+@mixin slideParam ($left) {
 	position: absolute;
 	display: flex;
 	flex-shrink: 0;
 	width: 100vw;
 	height: 100vh;
 	perspective: 1000px;
+	left: $left;
+}
+
+.firstSlide {
+	@include slideParam(0);
 }
 
 .secondSlide {
-	position: absolute;
-	left: 100vw;
-	top: 0;
-	width: 100vw;
-	flex-shrink: 0;
-	display: flex;
+	@include slideParam(100vw);
 }
 
 .thirdSlide {
-	position: absolute;
-	left: 200vw;
-	top: 0;
-	width: 100vw;
-	flex-shrink: 0;
-	display: flex;
+	@include slideParam(200vw);
+}
+
+@mixin useSize ($position, $width, $left) {
+	position: $position;
+	width: $width;
+	left: 	$left;
+	z-index: 1;
 }
 
 .buttonImg {
-	width: 9%;
-	position: absolute;
+	@include useSize (absolute, 9%, 18%);
 	bottom: 23%;
-	left: 	18%;
 	cursor: pointer;
-	z-index: 1;
 }
 
 .homeBtn {
-	position: fixed;
-	z-index: 1;
-	width: 2vw;
+	@include useSize (fixed, 2vw, 3vw);
 	top: 5vh;
-	left: 3vw;
 	cursor: pointer;
 }
 
 .onpointLogo {
-	position: fixed;
-	z-index: 100;
-	width: 5vw;
+	@include useSize (fixed, 5vw, 3vw);
 	bottom: 5vh;
-	left: 3vw;
 }
 .projectLogo {
-	position: fixed;
-	z-index: 1;
-	width: 9vw;
+	@include useSize (fixed, 9vw, 6vw);
 	top: 5vh;
-	left: 6vw;
 }

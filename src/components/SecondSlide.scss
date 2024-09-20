@@ -17,34 +17,30 @@
 	}
 }
 
+@mixin layerParam ($width, $right, $top) {
+	width: $width;
+	right: $right;
+	top: $top;
+}
+
 .second.Layer1 {
-	width: 25%;
-	right: -5%;
-	top: 20%;
+	@include layerParam(25%, -5%, 20%);
 }
 
 .second.Layer2 {
-	width: 40%;
-	right: -5%;
-	top: 20%;
+	@include layerParam(40%, -5%, 20%);
 }
 
 .second.Layer3 {
-	width: 55%;
-	right: -5%;
-	top: 25%;
+	@include layerParam(55%, -5%, 25%);
 }
 
 .second.Layer4 {
-	width: 70%;
-	right: -55%;
-	top: 60%;
+	@include layerParam(70%, -55%, 60%);
 }
 
 .second.Layer5 {
-	width: 20%;
-	right: -10%;
-	top: 75%;
+	@include layerParam(20%, -10%, 75%);
 }
 
 .LoremImg {
@@ -55,6 +51,19 @@
 }
 
 .scroll-container {
+	&::-webkit-scrollbar {
+		width: 15px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: #f04d91;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background: rgb(0,0,0);
+		border: 5px solid transparent;
+		background-clip: content-box;
+		border-radius: 10px;
+	}
 	position: relative;
 	max-width: 70%;
 	border-radius: 15px;
@@ -66,22 +75,6 @@
 	direction: rtl;
 }
 
-.scroll-container::-webkit-scrollbar {
-	width: 15px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-	background: #f04d91;
-	border-radius: 10px;
-}
-
-.scroll-container::-webkit-scrollbar-track {
-	background: rgb(0,0,0);
-	border: 5px solid transparent;
-	background-clip: content-box;
-	border-radius: 10px;
-}
-
 .contentBackground {
 	top: 30%;
 	left: 19%;
@@ -90,8 +83,6 @@
 	border-radius: 15px;
 	position: absolute;
 }
-
-
 
 .textSecSlide {
 	max-width: 90%; 

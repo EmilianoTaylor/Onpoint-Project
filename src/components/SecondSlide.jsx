@@ -1,4 +1,4 @@
-import './SecondSlide.css'
+import './SecondSlide.scss'
 import layer1 from './imagesSecondSlide/layer1.png'
 import layer2 from './imagesSecondSlide/layer2.png'
 import layer3 from './imagesSecondSlide/layer3.png'
